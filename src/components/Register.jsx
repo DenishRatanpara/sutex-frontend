@@ -61,11 +61,10 @@ const Register = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 animate-gradient-x">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md transform transition-all duration-500 hover:scale-105">
         <h1 className="text-2xl font-semibold text-center mb-6">Register</h1>
-        {error && <p className="text-red-500 mb-4">{error}</p>}{" "}
-        {/* Display error message */}
+        {error && <p className="text-red-500 mb-4">{error}</p>}
         <form onSubmit={onSubmit}>
           <div className="mb-4">
             <input
@@ -103,7 +102,7 @@ const Register = () => {
           <input
             type="submit"
             value="Register"
-            className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
           />
         </form>
         <p className="text-center mt-4">
