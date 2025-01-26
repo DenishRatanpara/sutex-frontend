@@ -17,10 +17,6 @@ const Login = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const user = {
-      username,
-      password,
-    };
 
     try {
       const config = {
@@ -29,7 +25,7 @@ const Login = () => {
         },
       };
 
-      const body = JSON.stringify(user);
+      const body = JSON.stringify({ username, password });
       const res = await axios.post(
         "https://sutex-backend.onrender.com/api/auth/login/",
         body,
@@ -61,45 +57,32 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 animate-gradient-x">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md transform transition-all duration-500 hover:scale-105">
-        <h1 className="text-2xl font-semibold text-center mb-6">Login</h1>
-        {error && <p className="text-red-500 mb-4">{error}</p>}
-        <form onSubmit={onSubmit}>
-          <div className="mb-4">
-            <input
-              type="text"
-              placeholder="Username"
-              name="username"
-              value={username}
-              onChange={onChange}
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <div className="mb-4">
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              value={password}
-              onChange={onChange}
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <input
-            type="submit"
-            value="Login"
-            className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
-          />
-        </form>
-        <p className="text-center mt-4">
-          Don't have an account?{" "}
-          <Link to="/register" className="text-blue-600 hover:underline">
-            Sign up
-          </Link>
-        </p>
+    <div className="login-container">
+      <h2>Welcome Back</h2>
+      {error && <p className="error-message">{error}</p>}
+      <form onSubmit={onSubmit}>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+          value={username}
+          onChange={onChange}
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          value={password}
+          onChange={onChange}
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
+      <div className="signup-link">
+        Don't have an account? <Link to="/register">Sign Up</Link>
       </div>
     </div>
   );
