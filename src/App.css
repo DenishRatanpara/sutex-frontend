@@ -13,8 +13,8 @@ body {
   background: white;
   border-radius: 15px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  width: 380px;
-  padding: 40px;
+  width: 450px;
+  padding: 3rem;
   position: relative;
   overflow: hidden;
   animation: float 3s ease-in-out infinite alternate;
@@ -64,7 +64,7 @@ h2 {
 }
 
 input {
-  width: 93%;
+  width: 95%;
   padding: 12px;
   margin: 15px 0;
   border: 1px solid #ddd;
@@ -96,129 +96,7 @@ button:hover {
 .login-link {
   text-align: center;
   margin-top: 20px;
-  color: #666;
-}
-
-.social-login {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.social-btn {
-  width: 50px;
-  height: 50px;
-  background: #f1f1f1;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10px;
-  transition: transform 0.2s;
-}
-
-.social-btn:hover {
-  transform: scale(1.1);
-}
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(45deg, #3494e6, #ec6ead);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  overflow: hidden;
-}
-
-.login-container {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  width: 380px;
-  padding: 40px;
-  position: relative;
-  overflow: hidden;
-  animation: float 3s ease-in-out infinite alternate;
-}
-
-.login-container::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 200px;
-  height: 200px;
-  background: rgba(52, 148, 230, 0.1);
-  border-radius: 50%;
-  transform: scale(0);
-  animation: pulse 3s infinite alternate;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 30px;
-  position: relative;
-  animation: slideDown 0.5s ease;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-input {
-  width: 93%;
-  padding: 12px;
-  margin: 15px 0;
-  border: 1px solid #ddd;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-
-input:focus {
-  outline: none;
-  border-color: #3494e6;
-  box-shadow: 0 0 10px rgba(52, 148, 230, 0.2);
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background: linear-gradient(45deg, #3494e6, #ec6ead);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-button:hover {
-  transform: scale(1.05);
-}
-
-.signup-link {
-  text-align: center;
-  margin-top: 20px;
-  color: #666;
+  color: black;
 }
 
 .social-login {

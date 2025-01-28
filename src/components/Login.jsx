@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "../App.css";
 import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
@@ -58,7 +59,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h2>Welcome Back</h2>
+      <h2 className="text-3xl">Welcome Back</h2>
       {error && <p className="error-message">{error}</p>}
       <form onSubmit={onSubmit}>
         <input
@@ -81,8 +82,11 @@ const Login = () => {
         />
         <button type="submit">Login</button>
       </form>
-      <div className="signup-link">
-        Don't have an account? <Link to="/register">Sign Up</Link>
+      <div className="signup-link mt-4 text-center">
+        Don't have an account?{" "}
+        <Link className="text-blue-500 " to="/register">
+          Sign Up
+        </Link>
       </div>
     </div>
   );

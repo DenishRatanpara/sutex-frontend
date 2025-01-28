@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Register from "./components/Register";
 import Home from "./components/Home";
+import Chat from "./components/Chat";
 import Login from "./components/Login";
-import "./App.css";
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Login />} /> {/* Default route */}
+        <Route path="/" element={<Chat />} /> {/* Default route */}
       </Routes>
     </Router>
   );

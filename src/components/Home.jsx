@@ -2,10 +2,16 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to the Home Page!</h1>
-      <p>You are now logged in.</p>
-    </div>
+    <header>
+      <h2 class="logo">Patel bhai</h2>
+      <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Service</a>
+        <a href="#">Contect</a>
+        <button class="popup">Login</button>
+      </nav>
+    </header>
   );
 };
 

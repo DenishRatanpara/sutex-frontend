@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../App.css";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -58,7 +59,7 @@ const Register = () => {
 
   return (
     <div className="login-container">
-      <h2>Sign Up</h2>
+      <h2 className="text-3xl">Sign Up</h2>
       {error && <p className="error-message">{error}</p>}
       <form onSubmit={onSubmit}>
         <input
@@ -90,8 +91,11 @@ const Register = () => {
         />
         <button type="submit">Register</button>
       </form>
-      <div className="login-link">
-        Already have an account? <a href="/login">Login</a>
+      <div className="login-link text-black  ">
+        Already have an account?
+        <Link className="text-blue-500 ml-1 " to="/login">
+          Login
+        </Link>
       </div>
     </div>
   );
