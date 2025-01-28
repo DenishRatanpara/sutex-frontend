@@ -12,7 +12,8 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Chat />} /> {/* Default route */}
+        <Route path="/" element={<Login />} /> {/* Default route */}
+        <Route path="/chat" element={<Chat />} />
       </Routes>
     </Router>
   );
